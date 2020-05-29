@@ -1,57 +1,56 @@
-*{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+#boton{
+    display: block;
+    padding: 20px;
+    background-color: green;
+    color: white;
+    width: 130px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid green;
+    transition: all 50ms;
+    /*transition: border 50ms, background 3s, border-radius: 1ms;*/
 }
 
-ul li{
+#boton:hover{
+    border-radius: 15px;
+    background: orangered;
+    border: 5px solid red;
+
+}
+
+#caja{
+    margin-top: 25px;
+    width: 250px;
+    height: 250px;
+    background: lightgreen;
+    color: white;
+    border: 5px solid black;
     font-size: 20px;
+    text-align: center;
+    line-height: 200px;
+    animation-name: desplazamiento;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
-ul li{
-    font-size: 25px;
-}
-
-ul li:first-child{
-    color: purple;
-    font-weight: bold;
-}
-
-ul li:nth-child(2){
-    color: yellow;
-    font-weight: bold;
-}
-
-ul li:last-child{
-    color: grey;
-    font-weight: bold;
-}
-
-#mi-enlace{
-    font-size: 30px;
-    color: lightseagreen;
-}
-
-#mi-enlace{
-    color: red;
-}
-
-#mi-enlace:visited{
-    color: olive;
-}
-
-#mi-enlace:hover{
-    color: blue;
-}
-
-#mi-enlace:active{
-    color: green;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-input[type="text"]{
-    margin-top: 20px;
-    padding: 10px;
-}
-
-input[type="text"]:focus{
-    border: 4px dashed red;
+@keyframes desplazamiento{
+    0%{
+        margin-left: opx;
+        transform: rotate(0deg);
+    }
+    50%{
+        margin-left: 1200px;
+        transform: rotate(360deg);
+        border-radius: 999px;
+    }
+    75%{
+        background: red;
+    }
+    100%{
+        margin-left: 0px;
+        transform: rotate(0deg);
+    }
 }
